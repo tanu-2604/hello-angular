@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 import { AuthorService } from './author.service';
 
 @Component({
@@ -9,11 +9,16 @@ import { AuthorService } from './author.service';
 export class AuthorComponent implements OnInit {
    title = "Author";
   author;
-  isActive = false;
+  @Input() isActive: boolean;
+  @Output() change = new EventEmitter();
   constructor(service: AuthorService) {
     this.author = service.getAuthor()
    }
 
+   onclick(){
+     this.isActive = !this.isActive;
+     this.change.emit()
+   }
   ngOnInit(): void {
   }
 

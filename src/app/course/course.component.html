@@ -1,5 +1,5 @@
 <h2>{{title}}</h2>
-<ul>
+<!-- <ul>
   <li *ngFor="let course of courses">
      {{course}}
   </li>
@@ -12,4 +12,18 @@
     </td>
   </tr>
 </table>
-<input #email (keyup.enter)="onKeyUp(email)"/>
+ <input #email (keyup.enter)="onKeyUp(email)"/> 
+<input [value]="email" (keyup.enter)="email = $event.target.value; onkeyup()"/> -->
+
+
+
+<!-- pipes -->
+
+<!-- {{course.title | uppercase}}<br/>
+{{course.students | number}}<br/>
+{{course.rating | number:'1.2-2'}} <br/>
+{{course.price | currency: 'AUD': true}}<br/>
+{{course.releaseDate}} -->
+
+<!-- custom pipes -->
+{{text | summary}}

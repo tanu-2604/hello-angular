@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { CourseService } from './course/course.service';
 import { AuthorComponent } from './author/author.component';
+import { SummaryPipe } from './summary.pipe';
+import { FvrtComponent } from './fvrt/fvrt.component';
+import { PanelComponent } from './panel/panel.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -12,6 +16,10 @@ import { AuthorComponent } from './author/author.component';
     AppComponent,
     CourseComponent,
     AuthorComponent,
+    SummaryPipe,
+    FvrtComponent,
+    PanelComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

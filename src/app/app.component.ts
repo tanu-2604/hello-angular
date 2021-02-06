@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hell';
+
+  post ={
+    title :"tanu",
+    isActive : true
+  }
+
+  onActive(){
+    console.log("sab kuc active hai")
+  }
 }
